@@ -9,7 +9,7 @@ export default function Fundo() {
       <div
         className={`${
           dark ? "opacity-0 " : " opacity-100  "
-        } h-screen w-screen absolute top-0 left-0 z-10 bg-gradient-to-b from-blue-600 to-blue-300 transition-opacity delay-100`}
+        } h-full w-full absolute top-0 left-0 z-10 bg-gradient-to-b from-blue-600 to-blue-300 transition-opacity delay-100`}
       ></div>
       <img
         src="/img/fundo.png"

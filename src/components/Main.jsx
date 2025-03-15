@@ -42,7 +42,7 @@ export default function Main() {
   };
 
   return (
-    <main className="sm:w-3/5 py-14 sm:py-10  z-40 flex flex-col items-center justify-center text-white bg-black/50 backdrop-blur-sm rounded-3xl font-inter space-y-6 overflow-hidden">
+    <main className="overflow-hidden min-w-screen px-10 sm:max-h-[80%] sm:w-3/5 py-14 sm:py-10  z-40 flex flex-col items-center justify-center text-white bg-black/50 backdrop-blur-sm sm:rounded-3xl font-inter space-y-6 ">
       <Pesquisar
         buscarClima={buscarClima}
         setPesquisou={setPesquisou}

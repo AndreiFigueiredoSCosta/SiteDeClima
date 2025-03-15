@@ -16,7 +16,7 @@ export default function Pesquisar({
         pesquisou ? "translate-x-[-1000px]" : ""
       }  mb-8 transition-all translate-x-0 flex flex-col justify-center items-center space-y-8 `}
     >
-      <h1 className="sm:text-3xl text-4xl text-center mx-6">
+      <h1 className="sm:text-3xl text-2xl text-center mx-6">
         Veja o clima de qualquer cidade
       </h1>
       <div className="flex text-black w-[90%] sm:w-3/5">
@@ -39,7 +39,7 @@ export default function Pesquisar({
           <Search />
         </button>
         <input
-          className="outline-none p-2 rounded-tr-lg rounded-br-lg w-[80%] h-[60px] text-3xl sm:text-xl"
+          className="outline-none p-2 rounded-tr-lg rounded-br-lg w-[80%] h-[60px] text-xl"
           type="text"
           placeholder="Pesquisar..."
           onChange={(event) => setCidade(event.target.value)}

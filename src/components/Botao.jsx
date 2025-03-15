@@ -3,7 +3,7 @@ import { Moon, Sun, SunDim } from "lucide-react";
 export default function Botao({ dark, setDark }) {
   return (
     <button
-      className="text-white absolute top-2 right-2 z-40 bg-transparent border-2 border-white rounded-[30px] w-14 h-7 flex justify-around items-center"
+      className="text-white absolute top-2 right-2 z-50 bg-transparent border-2 border-white rounded-[30px] w-14 h-7 flex justify-around items-center"
       onClick={() => {
         setDark(!dark);
       }}
