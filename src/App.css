@@ -1,42 +1,67 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.dark {
+  transition: all 1s;
+  background: linear-gradient(to bottom, black, rgb(51, 50, 50));
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.light {
+  transition: all 1s;
+  background: linear-gradient(to bottom, rgb(71, 128, 235), rgb(186, 233, 255));
 }
 
-@keyframes logo-spin {
-  from {
+.cinza {
+  filter: grayscale(100%);
+  opacity: 50%;
+  transition: all 1s;
+}
+
+.lua {
+  animation: pulsarLua 4s infinite alternate;
+}
+
+@keyframes pulsarLua {
+  0% {
+    filter: drop-shadow(0 0 8px white);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 4px white);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 10px white);
+  }
+}
+
+.sol {
+  animation: pulsarSua 4s infinite alternate;
+}
+
+@keyframes pulsarSua {
+  0% {
+    filter: drop-shadow(0 0 25px rgb(230, 187, 0));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 10px rgb(230, 187, 0));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 15px rgb(230, 187, 0));
+  }
+}
+
+.carregar {
+  animation: animacaoCarregar 1s linear infinite;
+}
+
+@keyframes animacaoCarregar {
+  0% {
     transform: rotate(0deg);
+    transition: all;
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
+    transition: all;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
