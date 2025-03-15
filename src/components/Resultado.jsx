@@ -6,10 +6,10 @@ export default function Resultado({ pesquisou, setPesquisou, clima, loading }) {
     <div
       className={`${
         pesquisou ? "translate-x-0" : " translate-x-[1000px]"
-      }  absolute  transition-all flex flex-col items-center justify-center `}
+      }  absolute  flex flex-col items-center justify-center transition-transform duration-[1s]`}
     >
       <button
-        className="text-white p-2 rounded-lg border-2 border-white hover:scale-110 transition-all"
+        className="text-white p-2 rounded-lg border-2 border-white hover:scale-110 "
         onClick={() => {
           setPesquisou(false);
         }}

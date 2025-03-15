@@ -14,7 +14,7 @@ export default function Pesquisar({
     <div
       className={`${
         pesquisou ? "translate-x-[-1000px]" : ""
-      }  mb-8 transition-all translate-x-0 flex flex-col justify-center items-center space-y-8 `}
+      }  mb-8 transition-transform translate-x-0 flex flex-col justify-center items-center space-y-8 duration-[1s] `}
     >
       <h1 className="sm:text-3xl text-2xl text-center mx-6">
         Veja o clima de qualquer cidade
