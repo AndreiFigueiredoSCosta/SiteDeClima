@@ -10,6 +10,27 @@ export default function Pesquisar({
   cidade,
 }) {
   const [erro, setErro] = useState(null);
+
+  const handlePesquisa = () => {
+    if (!cidade || !cidade.trim()) {
+      setErro("Insira um nome válido!");
+      setPesquisou(false);
+      return;
+    }
+
+    setErro(null);
+    buscarClima(cidade);
+    setPesquisou(true);
+    setCidade("");
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handlePesquisa();
+    }
+  };
+
   return (
     <div
       className={`${
@@ -24,16 +45,7 @@ export default function Pesquisar({
           className="bg-white p-2 rounded-tl-lg rounded-bl-lg hover:bg-stone-400 transition w-[20%] h-[60px]  flex justify-center items-center"
           onClick={(event) => {
             event.preventDefault();
-            if (!cidade || !cidade.trim()) {
-              setErro("Insira um nome válido!");
-              setPesquisou(false);
-              return;
-            }
-
-            setErro(null);
-            buscarClima(cidade);
-            setPesquisou(true);
-            setCidade("");
+            handlePesquisa();
           }}
         >
           <Search />
@@ -44,6 +56,7 @@ export default function Pesquisar({
           placeholder="Pesquisar..."
           onChange={(event) => setCidade(event.target.value)}
           value={cidade}
+          onKeyDown={handleKeyDown}
         />
       </div>
 
